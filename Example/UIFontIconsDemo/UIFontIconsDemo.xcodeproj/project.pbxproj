@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9B5831F05D934F3EF42EFBF /* Pods_UIFontIconsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE2950276271F66D4C6D5FE /* Pods_UIFontIconsDemo.framework */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A314B17E6146F502F06685 /* Pods-UIFontIconsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFontIconsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIFontIconsDemo/Pods-UIFontIconsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BCE2950276271F66D4C6D5FE /* Pods_UIFontIconsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIFontIconsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD333CC88514372C97F4B3B7 /* Pods-UIFontIconsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFontIconsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIFontIconsDemo/Pods-UIFontIconsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* UIFontIconsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFontIconsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5831F05D934F3EF42EFBF /* Pods_UIFontIconsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890D49FB001CC623877E3C8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD333CC88514372C97F4B3B7 /* Pods-UIFontIconsDemo.debug.xcconfig */,
+				12A314B17E6146F502F06685 /* Pods-UIFontIconsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D5C7F7371C3BC9CE008CDDBA = {
 			isa = PBXGroup;
 			children = (
 				D5C7F7421C3BC9CE008CDDBA /* UIFontIconsDemo */,
 				D5C7F7411C3BC9CE008CDDBA /* Products */,
+				890D49FB001CC623877E3C8C /* Pods */,
+				DBAB7EBFB51AF1073EAC8C6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +101,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		DBAB7EBFB51AF1073EAC8C6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE2950276271F66D4C6D5FE /* Pods_UIFontIconsDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "UIFontIconsDemo" */;
 			buildPhases = (
+				FF49194092896959AF4D99A7 /* [CP] Check Pods Manifest.lock */,
 				D5C7F73C1C3BC9CE008CDDBA /* Sources */,
 				D5C7F73D1C3BC9CE008CDDBA /* Frameworks */,
 				D5C7F73E1C3BC9CE008CDDBA /* Resources */,
+				BE6D059F3152A243ABC60126 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +176,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE6D059F3152A243ABC60126 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UIFontIconsDemo/Pods-UIFontIconsDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UIFontIcons/UIFontIcons.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFontIcons.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIFontIconsDemo/Pods-UIFontIconsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF49194092896959AF4D99A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIFontIconsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5C7F73C1C3BC9CE008CDDBA /* Sources */ = {
@@ -277,6 +350,7 @@
 		};
 		D5C7F7531C3BC9CE008CDDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD333CC88514372C97F4B3B7 /* Pods-UIFontIconsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIFontIconsDemo/Info.plist;
@@ -288,6 +362,7 @@
 		};
 		D5C7F7541C3BC9CE008CDDBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A314B17E6146F502F06685 /* Pods-UIFontIconsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIFontIconsDemo/Info.plist;

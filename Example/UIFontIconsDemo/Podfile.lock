@@ -1,0 +1,24 @@
+PODS:
+  - UIFontIcons/Core (0.0.1)
+  - UIFontIcons/Feather (0.0.1):
+    - UIFontIcons/Core
+  - UIFontIcons/FontAwesome (0.0.1):
+    - UIFontIcons/Core
+  - UIFontIcons/MaterialIcons (0.0.1):
+    - UIFontIcons/Core
+
+DEPENDENCIES:
+  - UIFontIcons/Feather (from `../../`)
+  - UIFontIcons/FontAwesome (from `../../`)
+  - UIFontIcons/MaterialIcons (from `../../`)
+
+EXTERNAL SOURCES:
+  UIFontIcons:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  UIFontIcons: eb1ee078dc558463dcae1c4de9a84cef584775b2
+
+PODFILE CHECKSUM: 7c39e16456db95bad6dfe90fee97b1403401cf61
+
+COCOAPODS: 1.5.3

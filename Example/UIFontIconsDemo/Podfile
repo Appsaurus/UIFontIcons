@@ -1,8 +1,11 @@
 use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'UIFontIconsDemo' do
- pod 'UIFontIcons', path: '../../'
+ pod 'UIFontIcons/MaterialIcons', path: '../../'
+ pod 'UIFontIcons/Feather', path: '../../'
+ pod 'UIFontIcons/FontAwesome', path: '../../'
+
 end
 
