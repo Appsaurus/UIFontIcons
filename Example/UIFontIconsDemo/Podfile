@@ -1,0 +1,8 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'UIFontIconsDemo' do
+ pod 'UIFontIcons', path: '../../'
+end
+
