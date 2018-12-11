@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIFontIcons"
   s.summary          = "A short description of UIFontIcons."
-  s.version          = "0.0.3"
+  s.version          = "0.0.4"
   s.homepage         = "github.com/brian/UIFontIcons"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
