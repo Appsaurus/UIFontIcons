@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIFontIcons"
   s.summary          = "A short description of UIFontIcons."
-  s.version          = "0.0.1"
+  s.version          = "0.0.3"
   s.homepage         = "github.com/brian/UIFontIcons"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
@@ -32,16 +32,25 @@ Pod::Spec.new do |s|
   s.subspec 'MaterialIcons' do |m|
     m.dependency 'UIFontIcons/Core'
     m.source_files = 'Sources/Fonts/MaterialIcons/MaterialIcons.swift'
+    m.resource_bundle = {
+        'MaterialIcons' => ['Sources/Fonts/MaterialIcons/MaterialIcons.ttf']
+    }
   end
 
   s.subspec 'Feather' do |f|
     f.dependency 'UIFontIcons/Core'
     f.source_files = 'Sources/Fonts/Feather/Feather.swift'
+    f.resource_bundle = {
+        'Feather' => ['Sources/Fonts/Feather/Feather.ttf']
+    }
   end
 
   s.subspec 'FontAwesome' do |f|
     f.dependency 'UIFontIcons/Core'
     f.source_files = 'Sources/Fonts/FontAwesome/FontAwesome.swift'
+    f.resource_bundle = {
+        'FontAwesome' => ['Sources/Fonts/FontAwesome/FontAwesome.ttf']
+    }
   end
 
   s.ios.frameworks = 'UIKit', 'Foundation'

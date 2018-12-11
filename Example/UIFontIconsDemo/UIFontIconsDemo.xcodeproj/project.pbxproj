@@ -143,6 +143,7 @@
 				TargetAttributes = {
 					D5C7F73F1C3BC9CE008CDDBA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4B7GH74X7C;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -188,12 +189,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UIFontIconsDemo/Pods-UIFontIconsDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/UIFontIcons/UIFontIcons.framework",
+				"${BUILT_PRODUCTS_DIR}/UIFontLoader/UIFontLoader.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFontIcons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFontLoader.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,6 +356,7 @@
 			baseConfigurationReference = CD333CC88514372C97F4B3B7 /* Pods-UIFontIconsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				INFOPLIST_FILE = UIFontIconsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.appsaurus.UIFontIcons.demo.UIFontIconsDemo;
@@ -365,6 +369,7 @@
 			baseConfigurationReference = 12A314B17E6146F502F06685 /* Pods-UIFontIconsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4B7GH74X7C;
 				INFOPLIST_FILE = UIFontIconsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.appsaurus.UIFontIcons.demo.UIFontIconsDemo;

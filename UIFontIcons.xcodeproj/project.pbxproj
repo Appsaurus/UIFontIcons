@@ -108,6 +108,9 @@
 		E4AF819521BF0691002D6E86 /* FontAwesome.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FontAwesome.svg; sourceTree = "<group>"; };
 		E4AF819721BF0691002D6E86 /* MaterialIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialIcons.swift; sourceTree = "<group>"; };
 		E4AF819821BF0691002D6E86 /* MaterialIcons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MaterialIcons.svg; sourceTree = "<group>"; };
+		E4AF823021C06089002D6E86 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		E4AF823121C060A4002D6E86 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		E4AF823221C060AC002D6E86 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +338,7 @@
 			children = (
 				E4AF819121BF0691002D6E86 /* Feather.swift */,
 				E4AF819221BF0691002D6E86 /* Feather.svg */,
+				E4AF823221C060AC002D6E86 /* Feather.ttf */,
 			);
 			path = Feather;
 			sourceTree = "<group>";
@@ -342,6 +346,7 @@
 		E4AF819321BF0691002D6E86 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
+				E4AF823121C060A4002D6E86 /* FontAwesome.ttf */,
 				E4AF819421BF0691002D6E86 /* FontAwesome.swift */,
 				E4AF819521BF0691002D6E86 /* FontAwesome.svg */,
 			);
@@ -351,6 +356,7 @@
 		E4AF819621BF0691002D6E86 /* MaterialIcons */ = {
 			isa = PBXGroup;
 			children = (
+				E4AF823021C06089002D6E86 /* MaterialIcons.ttf */,
 				E4AF819721BF0691002D6E86 /* MaterialIcons.swift */,
 				E4AF819821BF0691002D6E86 /* MaterialIcons.svg */,
 			);

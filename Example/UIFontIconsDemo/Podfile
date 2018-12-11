@@ -6,6 +6,7 @@ target 'UIFontIconsDemo' do
  pod 'UIFontIcons/MaterialIcons', path: '../../'
  pod 'UIFontIcons/Feather', path: '../../'
  pod 'UIFontIcons/FontAwesome', path: '../../'
+ pod 'UIFontLoader', :git => 'https://github.com/Appsaurus/UIFontLoader'
 
 end
 

@@ -1,6 +1,6 @@
 import UIKit
 import UIFontIcons
-
+import UIFontLoader
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let controller = ViewController()
     return controller
     }()
+    
+override public init() {
+    FontLoader.loadAllFonts()
+    let _ = MaterialIcons.font()
+    let _ = Feather.font()
+    let _ = FontAwesome.font()
+}
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
@@ -24,3 +31,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 }
+
