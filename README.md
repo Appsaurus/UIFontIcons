@@ -28,14 +28,10 @@ pod 'UIFontIcons', :git => 'https://github.com/Appsaurus/UIFontIcons'
 To install just write into your Cartfile:
 
 ```ruby
-github "brian/UIFontIcons"
+github "Appsaurus/UIFontIcons"
 ```
 
 **UIFontIcons** can also be installed manually. Just download and drop `Sources` folders in your project.
-
-## Author
-
-Brian Strobach, brian@appsaurus.io
 
 ## Contributing
 
