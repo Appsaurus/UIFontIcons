@@ -215,20 +215,7 @@ public extension UIImageView {
 
 
 public extension UITabBarItem {
-    
-//    public static func item<T: FontIconEnum>(withIcon icon: T, selectedIcon: T? = nil, style: TabBarItemStyle = .defaultStyle, title: String, tabIconHeight: CGFloat? = nil) -> UITabBarItem{
-//        let sizeConfiguration: FontIconSizeConfiguration = FontIconSizeConfiguration(fontSize: tabIconHeight ?? .icon)
-//
-//        let normalIconStyle = FontIconStyle(color: style.normalIconColor ?? style.normalTextColor)
-//        let normalImage = UIImage.iconImage(icon, configuration: FontIconConfiguration(style: normalIconStyle, sizeConfig: sizeConfiguration))
-//
-//        let selectedIconStyle = FontIconStyle(color: style.selectedIconColor ?? style.selectedTextColor)
-//        let selectedImage = UIImage.iconImage(selectedIcon ?? icon, configuration: FontIconConfiguration(style: selectedIconStyle, sizeConfig: sizeConfiguration))
-//        let item = UITabBarItem(title: title, image: normalImage, selectedImage: selectedImage)
-//        item.apply(tabBarItemStyle: style)
-//        return item
-//    }
-    
+
     public func setFontIconImage<FontIcon: FontIconEnum>(_ icon: FontIcon) {
         image = UIImage(icon: icon)
     }

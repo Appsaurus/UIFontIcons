@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     c.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*.swift'
     c.osx.source_files = 'Sources/{macOS,Shared}/**/*.swift'
     c.watchos.source_files = 'Sources/{watchOS,Shared}/**/*.swift'
-    c.resource = 'Sources/Shared/FontIconGenerator.py'
+    c.resource = 'Sources/Scripts/FontIconGenerator.py'
   end
   
   s.subspec 'MaterialIcons' do |m|

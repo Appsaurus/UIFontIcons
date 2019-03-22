@@ -92,10 +92,10 @@
 		D5C629491C3A7FAA007F7B7C /* UIFontIcons-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIFontIcons-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AF815421BED5BC002D6E86 /* FontIconGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FontIconGenerator.py; sourceTree = "<group>"; };
 		E4AF815521BED5BC002D6E86 /* FontIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontIcons.swift; sourceTree = "<group>"; };
-		E4AF815E21BED997002D6E86 /* UIFontIcons.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIFontIcons.podspec; sourceTree = "<group>"; };
+		E4AF815E21BED997002D6E86 /* UIFontIcons.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIFontIcons.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E4AF815F21BED997002D6E86 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		E4AF816021BED997002D6E86 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		E4AF816121BED998002D6E86 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E4AF816121BED998002D6E86 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E4AF816221BED998002D6E86 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E4AF816321BED998002D6E86 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
 		E4AF816421BED998002D6E86 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -282,6 +282,7 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E45368C022453CCB00651646 /* Scripts */,
 				E4AF818F21BF0691002D6E86 /* Fonts */,
 				D284B1201F79041300D94AF3 /* tvOS */,
 				D284B1211F79041300D94AF3 /* watchOS */,
@@ -302,7 +303,6 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E4AF815421BED5BC002D6E86 /* FontIconGenerator.py */,
 				E4AF815521BED5BC002D6E86 /* FontIcons.swift */,
 				E4AF816721BF044F002D6E86 /* Extensions.swift */,
 			);
@@ -321,6 +321,14 @@
 				D284B1341F7906DA00D94AF3 /* tvOS */,
 			);
 			path = UIFontIconsTests;
+			sourceTree = "<group>";
+		};
+		E45368C022453CCB00651646 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E4AF815421BED5BC002D6E86 /* FontIconGenerator.py */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		E4AF818F21BF0691002D6E86 /* Fonts */ = {
