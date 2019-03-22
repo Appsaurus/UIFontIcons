@@ -13,9 +13,7 @@
 
 ## Usage
 
-```swift
-<API>
-```
+Coming soon.
 
 ## Installation
 
@@ -23,21 +21,17 @@
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'UIFontIcons'
+pod 'UIFontIcons', :git => 'https://github.com/Appsaurus/UIFontIcons'
 ```
 
 **UIFontIcons** is also available through [Carthage](https://github.com/Carthage/Carthage).
 To install just write into your Cartfile:
 
 ```ruby
-github "brian/UIFontIcons"
+github "Appsaurus/UIFontIcons"
 ```
 
 **UIFontIcons** can also be installed manually. Just download and drop `Sources` folders in your project.
-
-## Author
-
-Brian Strobach, brian@appsaurus.io
 
 ## Contributing
 
