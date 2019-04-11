@@ -11,11 +11,11 @@ import CoreGraphics
 
 internal extension CGRect{
     
-    internal var maxSideLength: CGFloat{
+    var maxSideLength: CGFloat{
         return max(width, height)
     }
     
-    internal var minSideLength: CGFloat{
+    var minSideLength: CGFloat{
         return min(width, height)
     }
     
@@ -24,20 +24,20 @@ internal extension CGRect{
 internal extension NSMutableAttributedString{
     
     @discardableResult
-    internal func addAttributes(_ attrs: [NSAttributedString.Key : AnyObject]) -> NSMutableAttributedString{
+    func addAttributes(_ attrs: [NSAttributedString.Key : AnyObject]) -> NSMutableAttributedString{
         addAttributes(attrs, range: fullRange)
         return self
     }
     
     @discardableResult
-    internal func appendString(_ string: String) -> NSMutableAttributedString{
+    func appendString(_ string: String) -> NSMutableAttributedString{
         self.append(NSAttributedString(string: string))
         return self
     }
 }
 
 internal extension NSAttributedString{
-    internal  var fullRange: NSRange{
+    var fullRange: NSRange{
         return NSRange(location: 0, length: self.length)
     }
 }

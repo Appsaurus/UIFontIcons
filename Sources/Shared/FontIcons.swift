@@ -1,9 +1,9 @@
 //
 //  Icomoon.swift
-//  AppsaurusUIKit
+//  UIFontIcons
 //
 //  Created by Brian Strobach on 5/16/16.
-//  Copyright © 2016 Appsaurus LLC. All rights reserved.
+//  Copyright © 2016 Brian Strobach. All rights reserved.
 //
 
 import UIKit
@@ -32,7 +32,7 @@ extension FontIconEnum{
 }
 
 public extension FontIconEnum{
-    public func getFont(_ iconSize: CGFloat ) -> UIFont{
+    func getFont(_ iconSize: CGFloat ) -> UIFont{
         let font = UIFont(name: fontName, size: iconSize)
         assert(font != nil, "You have not bundled the icon font named \(fontName)")
         return font!
@@ -46,7 +46,7 @@ public extension UIFont {
 //        return font!
 //    }
     
-    public static func iconFont<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat) -> UIFont {
+    static func iconFont<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat) -> UIFont {
         let font = UIFont(name: icon.fontName, size: fontSize)
         assert(font != nil, "You have not bundled the icon font named \(icon.fontName)")
         return font!
@@ -67,14 +67,14 @@ public extension NSMutableAttributedString{
     //return iconString + " " + self
     //}
     
-    public func attributedStringWithFontIcon<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil) -> NSMutableAttributedString {
+    func attributedStringWithFontIcon<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil) -> NSMutableAttributedString {
         let attributes = self.attributes(at: self.length - 1, effectiveRange: nil)
         let color: UIColor? = color ?? attributes[.foregroundColor] as? UIColor
         let iconString: NSMutableAttributedString = NSMutableAttributedString.attributedString(icon, fontSize: fontSize, color: color)
         return iconString
     }
     
-    public class func attributedString<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, appendedTitle: String? = nil) -> NSMutableAttributedString{
+    class func attributedString<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, appendedTitle: String? = nil) -> NSMutableAttributedString{
         var attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.iconFont(icon, fontSize: fontSize ?? FontIconDefaults.fontSize)
         ]
@@ -89,7 +89,7 @@ public extension NSMutableAttributedString{
     }
     
     @discardableResult
-    public func append<FontIcon: FontIconEnum>(with icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, includeSpace: Bool = true) -> NSMutableAttributedString{
+    func append<FontIcon: FontIconEnum>(with icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, includeSpace: Bool = true) -> NSMutableAttributedString{
         let iconString: NSAttributedString = attributedStringWithFontIcon(icon, fontSize: fontSize, color: color)
         if includeSpace { self.appendString(" ") }
         self.append(iconString)
@@ -97,7 +97,7 @@ public extension NSMutableAttributedString{
     }
     
     @discardableResult
-    public func prepend<FontIcon: FontIconEnum>(with icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, includeSpace: Bool = true) -> NSMutableAttributedString{
+    func prepend<FontIcon: FontIconEnum>(with icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, includeSpace: Bool = true) -> NSMutableAttributedString{
         let iconString: NSAttributedString = attributedStringWithFontIcon(icon, fontSize: fontSize, color: color)
         if includeSpace { self.insert(NSAttributedString(string: " "), at: 0) }
         self.insert(iconString, at: 0)
@@ -112,7 +112,7 @@ public extension UIBarButtonItem {
 //        return barButtonItemWithCustomButtonFontIcon(icon, configuration: configuration)
 //    }
     
-    class public func barButtonItemWithCustomButtonFontIcon<T: FontIconEnum>(_ icon: T, configuration: FontIconConfiguration) -> UIBarButtonItem{
+    class func barButtonItemWithCustomButtonFontIcon<T: FontIconEnum>(_ icon: T, configuration: FontIconConfiguration) -> UIBarButtonItem{
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44.0 , height: 44.0)) //TODO: Change to 66 x 66 for Plus sized iPhones
         button.setImage(UIImage.iconImage(icon, configuration: configuration) as UIImage?, for: .normal)
         button.contentHorizontalAlignment = .left
@@ -141,13 +141,13 @@ public extension UIBarButtonItem {
 //        return bb
 //    }
     
-    class public func barButtonItemWithFontIcon<FontIcon: FontIconEnum>(_ icon: FontIcon, size: CGFloat = 18.0) -> UIBarButtonItem{
+    class func barButtonItemWithFontIcon<FontIcon: FontIconEnum>(_ icon: FontIcon, size: CGFloat = 18.0) -> UIBarButtonItem{
         let barButton: UIBarButtonItem = UIBarButtonItem()
         barButton.setFontIconTitle(icon, for: .normal, size: size)
         return barButton
     }
     
-    public func setFontIconTitle<FontIcon: FontIconEnum>(_ icon: FontIcon, for state: UIControl.State = .normal, size: CGFloat = 18.0) {
+    func setFontIconTitle<FontIcon: FontIconEnum>(_ icon: FontIcon, for state: UIControl.State = .normal, size: CGFloat = 18.0) {
         let font = icon.getFont(size)
         setTitleTextAttributes([.font: font], for: state)
         title = icon.rawValue
@@ -156,11 +156,11 @@ public extension UIBarButtonItem {
 
 public extension UIButton {
     
-    public convenience init<FontIcon: FontIconEnum>(icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, forState state: UIControl.State = .normal){
+    convenience init<FontIcon: FontIconEnum>(icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, forState state: UIControl.State = .normal){
         self.init(frame: .zero)
         setFontIconTitle(icon, fontSize: fontSize, color: color, forState: state)
     }
-    public func setFontIconTitle<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, forState state: UIControl.State = .normal) {
+    func setFontIconTitle<FontIcon: FontIconEnum>(_ icon: FontIcon, fontSize: CGFloat? = nil, color: UIColor? = nil, forState state: UIControl.State = .normal) {
         if let label = titleLabel {
             let pointSize = fontSize ?? label.font.pointSize
             let font = icon.getFont(pointSize)
@@ -200,11 +200,11 @@ public extension UILabel {
 
 public extension UIImageView {
     
-    public func setFontIconImage<FontIcon: FontIconEnum>(_ icon: FontIcon, style: FontIconStyle = FontIconStyle(), fillPercentOfFrame: CGFloat = 1.0) {
+    func setFontIconImage<FontIcon: FontIconEnum>(_ icon: FontIcon, style: FontIconStyle = FontIconStyle(), fillPercentOfFrame: CGFloat = 1.0) {
         self.image = iconImageThatFits(icon, style: style, fillPercentOfFrame: fillPercentOfFrame)
     }
     
-    public func iconImageThatFits<FontIcon: FontIconEnum>(_ icon: FontIcon, style: FontIconStyle = FontIconStyle(), fillPercentOfFrame: CGFloat = 1.0) -> UIImage{
+    func iconImageThatFits<FontIcon: FontIconEnum>(_ icon: FontIcon, style: FontIconStyle = FontIconStyle(), fillPercentOfFrame: CGFloat = 1.0) -> UIImage{
         setNeedsLayout()
         layoutIfNeeded()
         let fontSize: CGFloat = (frame.width > 0.0 && frame.height > 0.0) ? frame.maxSideLength * fillPercentOfFrame : 50
@@ -216,7 +216,7 @@ public extension UIImageView {
 
 public extension UITabBarItem {
 
-    public func setFontIconImage<FontIcon: FontIconEnum>(_ icon: FontIcon) {
+    func setFontIconImage<FontIcon: FontIconEnum>(_ icon: FontIcon) {
         image = UIImage(icon: icon)
     }
 }
@@ -286,13 +286,13 @@ public class FontIconStyle{
 }
 public extension UIImage {
     
-    public convenience init<FontIcon: FontIconEnum>(icon: FontIcon,
+    convenience init<FontIcon: FontIconEnum>(icon: FontIcon,
                                                             configuration: FontIconConfiguration = FontIconConfiguration()) {
         let image = UIImage.iconImage(icon, configuration: configuration)
         self.init(cgImage: image.cgImage!, scale: image.scale, orientation: image.imageOrientation)
     }
     
-    public static func iconImage<FontIcon: FontIconEnum>(_ icon: FontIcon,
+    static func iconImage<FontIcon: FontIconEnum>(_ icon: FontIcon,
                                                                  color: UIColor? = nil,
                                                                  fontSize: CGFloat? = nil) -> UIImage {
         let config = FontIconConfiguration()
@@ -301,7 +301,7 @@ public extension UIImage {
         return iconImage(icon, configuration: config)
     }
     
-    public static func iconImage<FontIcon: FontIconEnum>(_ icon: FontIcon,
+    static func iconImage<FontIcon: FontIconEnum>(_ icon: FontIcon,
                                                                  configuration: FontIconConfiguration = FontIconConfiguration()) -> UIImage {
         var size = configuration.sizeConfig.size
         let style = configuration.style

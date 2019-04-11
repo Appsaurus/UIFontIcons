@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.social_media_url = 'https://twitter.com/brian'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.requires_arc = true
 
   s.ios.deployment_target = '9.0'
@@ -20,13 +20,12 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "3.0"
 
   s.default_subspec = 'Core'
-
+  
   s.subspec 'Core' do |c|
     c.ios.source_files = 'Sources/{iOS,Shared}/**/*.swift'
     c.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*.swift'
     c.osx.source_files = 'Sources/{macOS,Shared}/**/*.swift'
     c.watchos.source_files = 'Sources/{watchOS,Shared}/**/*.swift'
-    c.resource = 'Sources/Scripts/FontIconGenerator.py'
   end
   
   s.subspec 'MaterialIcons' do |m|
