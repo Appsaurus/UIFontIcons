@@ -1,12 +1,12 @@
 PODS:
-  - UIFontIcons/Core (0.0.3)
-  - UIFontIcons/Feather (0.0.3):
+  - UIFontIcons/Core (0.0.6)
+  - UIFontIcons/Feather (0.0.6):
     - UIFontIcons/Core
-  - UIFontIcons/FontAwesome (0.0.3):
+  - UIFontIcons/FontAwesome (0.0.6):
     - UIFontIcons/Core
-  - UIFontIcons/MaterialIcons (0.0.3):
+  - UIFontIcons/MaterialIcons (0.0.6):
     - UIFontIcons/Core
-  - UIFontLoader (0.0.2)
+  - UIFontLoader (0.0.3)
 
 DEPENDENCIES:
   - UIFontIcons/Feather (from `../../`)
@@ -22,12 +22,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   UIFontLoader:
-    :commit: 18d3041335503dfb72b59ab9f427bb9a4e1d3008
+    :commit: ee7c29b18ce3d39a4f683a1475831579d32b5dce
     :git: https://github.com/Appsaurus/UIFontLoader
 
 SPEC CHECKSUMS:
-  UIFontIcons: fda774df4cedee350d8e0d4befa84a9175f3e7b9
-  UIFontLoader: f4e97bbbfdd736f1807c8ca99369895420bea937
+  UIFontIcons: 93d33ae6c1de1253be2abd834e79e7cebca21bd4
+  UIFontLoader: df06440b24c51384676dc9ec54aecc3aff5a7a97
 
 PODFILE CHECKSUM: 136e011c315bc1b1d5370ad7ec8f0eefc0c71406
 
