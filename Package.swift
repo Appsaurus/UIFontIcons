@@ -16,10 +16,25 @@ let package = Package(
         .library(
             name: "UIFontIcons",
             targets: [
-                "UIFontIcons",
-                "Feather",
-                "FontAwesome",
+                "UIFontIcons"
+            ]
+        ),
+        .library(
+            name: "UIFontIconsFeather",
+            targets: [
+                "Feather"
+            ]
+        ),
+        .library(
+            name: "UIFontIconsMaterialIcons",
+            targets: [
                 "MaterialIcons"
+            ]
+        ),
+        .library(
+            name: "UIFontIconsFontAwesome",
+            targets: [
+                "FontAwesome"
             ]
         ),
     ],

@@ -6,6 +6,7 @@
 //  Copyright © 2018 Brian Strobach. All rights reserved.
 //
 
+#if !os(macOS)
 import UIKit
 import CoreGraphics
 
@@ -41,3 +42,5 @@ internal extension NSAttributedString{
         return NSRange(location: 0, length: self.length)
     }
 }
+
+#endif
