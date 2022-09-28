@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41E7CAA28E4BB3B000D218C /* UIFontIconsFeather in Frameworks */ = {isa = PBXBuildFile; productRef = E41E7CA928E4BB3B000D218C /* UIFontIconsFeather */; };
+		E41E7CAC28E4BB3B000D218C /* UIFontIconsFontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = E41E7CAB28E4BB3B000D218C /* UIFontIconsFontAwesome */; };
+		E41E7CAE28E4BB3B000D218C /* UIFontIconsMaterialIcons in Frameworks */ = {isa = PBXBuildFile; productRef = E41E7CAD28E4BB3B000D218C /* UIFontIconsMaterialIcons */; };
 		E4244A742795CFD500A1F105 /* UIFontIcons in Frameworks */ = {isa = PBXBuildFile; productRef = E4244A732795CFD500A1F105 /* UIFontIcons */; };
 		E4244A762795CFDA00A1F105 /* UIFontIcons in Frameworks */ = {isa = PBXBuildFile; productRef = E4244A752795CFDA00A1F105 /* UIFontIcons */; };
 		E4244A782795CFF100A1F105 /* UIFontIcons in Frameworks */ = {isa = PBXBuildFile; productRef = E4244A772795CFF100A1F105 /* UIFontIcons */; };
@@ -63,8 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41E7CAE28E4BB3B000D218C /* UIFontIconsMaterialIcons in Frameworks */,
 				E4244A882795E05A00A1F105 /* UIFontLoader in Frameworks */,
 				E4244A742795CFD500A1F105 /* UIFontIcons in Frameworks */,
+				E41E7CAA28E4BB3B000D218C /* UIFontIconsFeather in Frameworks */,
+				E41E7CAC28E4BB3B000D218C /* UIFontIconsFontAwesome in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +229,9 @@
 			packageProductDependencies = (
 				E4244A732795CFD500A1F105 /* UIFontIcons */,
 				E4244A872795E05A00A1F105 /* UIFontLoader */,
+				E41E7CA928E4BB3B000D218C /* UIFontIconsFeather */,
+				E41E7CAB28E4BB3B000D218C /* UIFontIconsFontAwesome */,
+				E41E7CAD28E4BB3B000D218C /* UIFontIconsMaterialIcons */,
 			);
 			productName = "UIFontIconsDemo (iOS)";
 			productReference = E47ABC142791EFA00065ECF4 /* UIFontIconsDemo.app */;
@@ -905,6 +914,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E41E7CA928E4BB3B000D218C /* UIFontIconsFeather */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFontIconsFeather;
+		};
+		E41E7CAB28E4BB3B000D218C /* UIFontIconsFontAwesome */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFontIconsFontAwesome;
+		};
+		E41E7CAD28E4BB3B000D218C /* UIFontIconsMaterialIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFontIconsMaterialIcons;
+		};
 		E4244A732795CFD500A1F105 /* UIFontIcons */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIFontIcons;
